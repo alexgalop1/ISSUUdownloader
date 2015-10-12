@@ -1,4 +1,4 @@
-package com.alexgalop1;
+package com.issuudownloader;
 
 /**
  * Hello world!
