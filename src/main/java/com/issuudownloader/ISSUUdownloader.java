@@ -27,7 +27,7 @@ public class ISSUUdownloader {
         this.url = url;
     }
 
-    public void download() throws IOException, DocumentException {
+    public void download() throws IOException, DocumentException, InterruptedException {
         if (checkIssuuValidity(this.url)) {
             Document doc = Jsoup.connect(this.url).get();
             Elements elements = doc.select("meta[property=og:video]");
@@ -61,9 +61,14 @@ public class ISSUUdownloader {
                     n++;
                 }
                 System.out.println("\r[##########] Done!\n");
-                System.out.println("Thank you for downloading this ebook using ISSUUdownloader");
-                document.add(new Paragraph("Thanks for downloading this ebook using ISSUUdownloader."));
                 document.close();
+
+                Thread.sleep(1000);
+                System.out.println("Filename : " + pdffile);
+
+
+                Thread.sleep(300);
+                System.out.println("Thank you for downloading this ebook using ISSUUdownloader");
 
             } else {
                 System.err.println("Error : No publication found");
