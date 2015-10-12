@@ -19,7 +19,7 @@ public class Main {
         ISSUUdownloader issuUdownloader = new ISSUUdownloader(url);
         try {
             issuUdownloader.download();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
