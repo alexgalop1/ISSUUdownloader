@@ -17,9 +17,6 @@ import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by thesealex on 12/10/15.
- */
 public class ISSUUdownloader {
     public String url;
 

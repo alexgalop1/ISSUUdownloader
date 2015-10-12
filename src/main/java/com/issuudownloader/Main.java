@@ -3,9 +3,6 @@ package com.issuudownloader;
 import java.io.IOException;
 import java.util.Scanner;
 
-/**
- * Created by thesealex on 12/10/15.
- */
 public class Main {
 
 
