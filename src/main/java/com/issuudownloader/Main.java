@@ -1,6 +1,7 @@
 package com.issuudownloader;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  * Created by thesealex on 12/10/15.
@@ -10,12 +11,19 @@ public class Main {
 
 
     public static void main(final String[] args){
-        if(args.length!=1){
-            System.err.println("Error : ISSUU publication is missing");
+        String url = "";
+        if(args.length==0){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("URL of the ISSUU publication :");
+            url = sc.nextLine();
+
+        } else if(args.length==1){
+            url = args[0];
+        } else {
+            System.err.println("Error : too many arguments");
             System.exit(-1);
         }
 
-        String url = args[0];
         ISSUUdownloader issuUdownloader = new ISSUUdownloader(url);
         try {
             issuUdownloader.download();
