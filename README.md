@@ -4,7 +4,7 @@ ISSUU Downloader allows you to download any ISSUU (http://www.issuu.com) publica
 
 ## Usage
 
-java -jar ISSUUdownloader.jar <url_of_issuu_publication>
+java -jar ISSUUdownloader.jar url_of_issuu_publication
 
 or
 
